@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" width="1200" height="340" role="img" aria-labelledby="hero-title hero-desc">
+  <title id="hero-title">Catalyst</title>
+  <desc id="hero-desc">A green panel in the style of the Catalyst terminal front end. On the left, the word catalyst inside a pane frame, with the line: measure, differentiate, verify, record, export. On the right, a curve with its derivative drawn as a tangent line and the verifier's finite-difference estimate drawn through two probe points; the two agree.</desc>
+  <defs>
+    <style>
+      .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+      .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+    </style>
+    <clipPath id="hero-clip"><rect width="1200" height="340" rx="18"/></clipPath>
+  </defs>
+  <rect width="1200" height="340" rx="18" fill="#136207"/>
+  <g clip-path="url(#hero-clip)" opacity="0.18" stroke="#F2F7F0" stroke-width="1">
+    <path d="M700 0V340M760 0V340M820 0V340M880 0V340M940 0V340M1000 0V340M1060 0V340M1120 0V340"/>
+    <path d="M700 60H1200M700 120H1200M700 180H1200M700 240H1200M700 300H1200"/>
+  </g>
+
+  <!-- the pane frame, as the front end draws it -->
+  <g fill="none" stroke="#A8C6A0" stroke-width="2">
+    <path d="M60 58H48V292H660V58H190"/>
+  </g>
+  <text class="mono" x="78" y="64" font-size="17" fill="#A8C6A0">catalyst</text>
+
+  <text class="sans" x="82" y="168" font-size="92" font-weight="700" fill="#F2F7F0" letter-spacing="-2">catalyst</text>
+  <text class="mono" x="86" y="212" font-size="20" fill="#D7F5C9">measure · differentiate · verify · record · export</text>
+  <text class="mono" x="86" y="252" font-size="15" fill="#A8C6A0">one JSON object per command · no dependencies · no network · no unsafe</text>
+
+  <!-- the curve, the derivative and the verifier's estimate -->
+  <path d="M716 262 C 790 262, 850 230, 905 176 S 1010 96, 1140 70" fill="none" stroke="#F2F7F0" stroke-width="3" stroke-linecap="round"/>
+  <line x1="828" y1="234" x2="1002" y2="118" stroke="#D7F5C9" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="838" y1="238" x2="1012" y2="122" stroke="#A8C6A0" stroke-width="2" stroke-dasharray="7 6" stroke-linecap="round"/>
+  <circle cx="915" cy="176" r="6" fill="#136207" stroke="#F2F7F0" stroke-width="3"/>
+  <circle cx="886" cy="195" r="4.5" fill="#A8C6A0"/>
+  <circle cx="944" cy="157" r="4.5" fill="#A8C6A0"/>
+  <text class="mono" x="1016" y="112" font-size="14" fill="#D7F5C9">derivative</text>
+  <text class="mono" x="1024" y="140" font-size="14" fill="#A8C6A0">verifier's estimate</text>
+  <text class="mono" x="922" y="212" font-size="13" fill="#A8C6A0">declared point, and 1 % either side</text>
+  <text class="mono" x="716" y="300" font-size="14" fill="#F2F7F0">agrees within 1e-6 relative or 1e-9 absolute, or nothing is written</text>
+</svg>

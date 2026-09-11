@@ -1,0 +1,24 @@
+# Build output
+/target
+# Local environments and run output
+.venv
+logs
+*.log
+# Local configuration never belongs in the tree
+.env
+.env.*
+# Editor and OS leftovers
+.DS_Store
+*~
+*.orig
+*.rej
+*.swp
+# State written by a build or verification harness, never part of the crate
+.canaryio
+.agents
+CANARYIO_CONTRIBUTION.md
+# Go writes its executable beside the source when built in place
+/go/standin/catalyst_standin
+/go/standin/standin
+/go/catalyst/catalyst
+._*

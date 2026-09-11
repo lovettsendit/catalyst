@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 500" width="840" height="500" role="img" aria-labelledby="tui-title tui-desc">
+  <title id="tui-title">The guided terminal flow at the Results step</title>
+  <desc id="tui-desc">One 80 by 24 frame of catalyst tui, as the headless renderer wrote it: four panes named catalyst, measurements, steps and keys. The catalyst pane shows Goal, Inputs, Run, Results, Export with Results current, state measured, the value 55.15602577312438, every partial finite, and the cost of 18 primal and 33 adjoint instructions. The measurements pane shows d/dk 1.5174405071376345 and d/dc -27.834603669757712 at k 12 N/m and c 1.5 N*s/m. The steps pane marks Goal, Inputs and Run done, Results here, Export not yet. The keys pane names enter, esc, ctrl-s and ctrl-c.</desc>
+  <defs>
+    <style>
+      .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; font-size: 15px; white-space: pre; }
+    </style>
+  </defs>
+  <rect width="840" height="500" rx="18" fill="#136207"/>
+  <text class="mono" x="40" y="30" fill="#A8C6A0" font-size="13">catalyst tui   frame 21   step: results   state: measured</text>
+  <g class="mono" fill="#F2F7F0" xml:space="preserve">
+    <text x="40" y="60"  fill="#A8C6A0" textLength="760" lengthAdjust="spacingAndGlyphs">┌─ catalyst ────────────────────────────────────┬─ measurements ───────────────┐</text>
+    <text x="40" y="78"  textLength="760" lengthAdjust="spacingAndGlyphs">│ Goal &gt; Inputs &gt; Run &gt; Results &gt; Export        │ value   55.15602577312438    │</text>
+    <text x="40" y="96"  textLength="760" lengthAdjust="spacingAndGlyphs">│                      [Results]                │                              │</text>
+    <text x="40" y="114" textLength="760" lengthAdjust="spacingAndGlyphs">│ state: measured                               │ d/dk     1.5174405071376345  │</text>
+    <text x="40" y="132" textLength="760" lengthAdjust="spacingAndGlyphs">│                                               │ d/dc   -27.834603669757712   │</text>
+    <text x="40" y="150" textLength="760" lengthAdjust="spacingAndGlyphs">│ results                                       │                              │</text>
+    <text x="40" y="168" textLength="760" lengthAdjust="spacingAndGlyphs">│                                               │ at                           │</text>
+    <text x="40" y="186" textLength="760" lengthAdjust="spacingAndGlyphs">│ value     55.15602577312438                   │ k  12    N/m                 │</text>
+    <text x="40" y="204" textLength="760" lengthAdjust="spacingAndGlyphs">│ partials  every one is finite                 │ c   1.5  N*s/m               │</text>
+    <text x="40" y="222" textLength="760" lengthAdjust="spacingAndGlyphs">│                                               │                              │</text>
+    <text x="40" y="240" textLength="760" lengthAdjust="spacingAndGlyphs">│ cost      18 primal instructions, 33 adjoint  │                              │</text>
+    <text x="40" y="258" textLength="760" lengthAdjust="spacingAndGlyphs">│                                               │                              │</text>
+    <text x="40" y="276" textLength="760" lengthAdjust="spacingAndGlyphs">│                                               │                              │</text>
+    <text x="40" y="294" fill="#A8C6A0" textLength="760" lengthAdjust="spacingAndGlyphs">│                                               ├─ steps ──────────────────────┤</text>
+    <text x="40" y="312" textLength="760" lengthAdjust="spacingAndGlyphs">│                                               │ 1 Goal                  done │</text>
+    <text x="40" y="330" textLength="760" lengthAdjust="spacingAndGlyphs">│                                               │ 2 Inputs                done │</text>
+    <text x="40" y="348" textLength="760" lengthAdjust="spacingAndGlyphs">│                                               │ 3 Run                   done │</text>
+    <text x="40" y="366" textLength="760" lengthAdjust="spacingAndGlyphs">│                                               │ 4 Results               here │</text>
+    <text x="40" y="384" textLength="760" lengthAdjust="spacingAndGlyphs">│                                               │ 5 Export                   - │</text>
+    <text x="40" y="402" fill="#A8C6A0" textLength="760" lengthAdjust="spacingAndGlyphs">├─ keys ────────────────────────────────────────┴──────────────────────────────┤</text>
+    <text x="40" y="420" textLength="760" lengthAdjust="spacingAndGlyphs">│ enter   on to Export    esc     back to Inputs  ctrl-s  save                 │</text>
+    <text x="40" y="438" textLength="760" lengthAdjust="spacingAndGlyphs">│ ctrl-c  quit                                                                 │</text>
+    <text x="40" y="456" textLength="760" lengthAdjust="spacingAndGlyphs">│                                                                              │</text>
+    <text x="40" y="474" fill="#A8C6A0" textLength="760" lengthAdjust="spacingAndGlyphs">└──────────────────────────────────────────────────────────────────────────────┘</text>
+  </g>
+</svg>

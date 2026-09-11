@@ -1,0 +1,60 @@
+# Formatting, lints and the full test suite on Linux.
+#
+# This workflow is written, not claimed: it has never run, because the
+# repository has never been pushed. Its first run is the first push.
+#
+# Catalyst itself has no dependencies, so nothing is fetched for the build.
+# The acceptance suite does need two toolchains, because it checks the exports
+# it produces by actually running them: Go for `catalyst export go` and R for
+# `catalyst export r`. Both come from the runner image or its distribution
+# packages, not from a third party.
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    name: fmt, clippy and tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      CARGO_TERM_COLOR: always
+      CGO_ENABLED: "0"
+      GOTOOLCHAIN: local
+      GOPROXY: "off"
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Rust toolchain
+        run: |
+          rustup toolchain install stable --profile minimal --component rustfmt,clippy
+          rustup default stable
+          rustc --version && cargo --version
+
+      - name: R, for the R export checks
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends r-base-core
+          Rscript --version
+
+      - name: Go, for the Go export checks
+        run: go version
+
+      - name: Formatting
+        run: cargo fmt --all -- --check
+
+      - name: Lints
+        run: cargo clippy --offline --locked --all-targets -- -D warnings
+
+      - name: Tests
+        run: cargo test --offline --locked --no-fail-fast
+
+      - name: Release build
+        run: cargo build --offline --locked --release

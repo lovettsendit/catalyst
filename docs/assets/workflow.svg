@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" width="1200" height="460" role="img" aria-labelledby="wf-title wf-desc">
+  <title id="wf-title">Two lanes, one engine, one verifier</title>
+  <desc id="wf-desc">An expression in Catalyst's own language and a program compiled to LLVM IR by your own compiler both flow into one intermediate representation, which is optimised, analysed and differentiated. The derivative then passes Catalyst's finite-difference verifier. What agrees is written as a JSON answer, a Go or R export, or a derivative artifact with a digest chain. What disagrees is refused and nothing is written.</desc>
+  <defs>
+    <style>
+      .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+      .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+    </style>
+    <marker id="wf-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#D7F5C9"/>
+    </marker>
+    <marker id="wf-arrow-amber" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10z" fill="#F5C453"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="460" rx="18" fill="#136207"/>
+
+  <!-- lane 1: an expression -->
+  <g>
+    <rect x="36" y="78" width="300" height="94" rx="12" fill="#0B4A04" stroke="#A8C6A0" stroke-width="1.5"/>
+    <text class="mono" x="54" y="104" font-size="13" fill="#A8C6A0">expression · catalyst.problem.v1</text>
+    <text class="mono" x="54" y="132" font-size="15" fill="#F2F7F0">func spring(k, c) =</text>
+    <text class="mono" x="54" y="154" font-size="15" fill="#F2F7F0">  8 / c + 100 * exp(…)</text>
+  </g>
+
+  <!-- lane 2: a compiled program -->
+  <g>
+    <rect x="36" y="288" width="300" height="94" rx="12" fill="#0B4A04" stroke="#A8C6A0" stroke-width="1.5"/>
+    <text class="mono" x="54" y="314" font-size="13" fill="#A8C6A0">program · your own compiler</text>
+    <text class="mono" x="54" y="342" font-size="15" fill="#F2F7F0">drag.rs   drag.c   drag.cpp</text>
+    <text class="mono" x="54" y="364" font-size="15" fill="#D7F5C9">rustc / clang  →  drag.ll</text>
+  </g>
+
+  <!-- the two lanes flow into one IR -->
+  <path d="M336 125 C 420 125, 430 230, 470 230" fill="none" stroke="#D7F5C9" stroke-width="2.5" marker-end="url(#wf-arrow)"/>
+  <path d="M336 335 C 420 335, 430 230, 470 230" fill="none" stroke="#D7F5C9" stroke-width="2.5" marker-end="url(#wf-arrow)"/>
+  <text class="mono" x="352" y="270" font-size="12" fill="#A8C6A0">Catalyst Gradient</text>
+  <text class="mono" x="352" y="286" font-size="12" fill="#A8C6A0">Compiler reads the IR</text>
+
+  <!-- the engine -->
+  <circle cx="548" cy="230" r="72" fill="#0B4A04" stroke="#F2F7F0" stroke-width="2.5"/>
+  <circle cx="548" cy="230" r="58" fill="none" stroke="#A8C6A0" stroke-width="1" stroke-dasharray="3 5"/>
+  <text class="sans" x="548" y="222" font-size="17" font-weight="700" fill="#F2F7F0" text-anchor="middle">Catalyst IR</text>
+  <text class="mono" x="548" y="244" font-size="11.5" fill="#D7F5C9" text-anchor="middle">optimise · analyse</text>
+  <text class="mono" x="548" y="260" font-size="11.5" fill="#D7F5C9" text-anchor="middle">differentiate</text>
+  <text class="mono" x="548" y="330" font-size="12" fill="#A8C6A0" text-anchor="middle">reverse mode, or forward for a loop</text>
+  <text class="mono" x="548" y="346" font-size="12" fill="#A8C6A0" text-anchor="middle">the mode is recorded</text>
+
+  <!-- to the verifier -->
+  <path d="M622 230 H 700" fill="none" stroke="#D7F5C9" stroke-width="2.5" marker-end="url(#wf-arrow)"/>
+  <text class="mono" x="662" y="216" font-size="12" fill="#A8C6A0" text-anchor="middle">derivative</text>
+
+  <!-- the verifier: a gate, drawn as a double ring -->
+  <circle cx="776" cy="230" r="62" fill="#0B4A04" stroke="#F2F7F0" stroke-width="2.5"/>
+  <circle cx="776" cy="230" r="50" fill="none" stroke="#F2F7F0" stroke-width="1.5"/>
+  <text class="sans" x="776" y="224" font-size="16" font-weight="700" fill="#F2F7F0" text-anchor="middle">verifier</text>
+  <text class="mono" x="776" y="244" font-size="11" fill="#D7F5C9" text-anchor="middle">finite differences</text>
+  <text class="mono" x="776" y="258" font-size="11" fill="#D7F5C9" text-anchor="middle">over the primal</text>
+  <text class="mono" x="776" y="118" font-size="12" fill="#A8C6A0" text-anchor="middle">owes the differentiator nothing:</text>
+  <text class="mono" x="776" y="134" font-size="12" fill="#A8C6A0" text-anchor="middle">the derivative transform is not in its path</text>
+
+  <!-- disagree: refused -->
+  <path d="M776 292 V 372" fill="none" stroke="#F5C453" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#wf-arrow-amber)"/>
+  <text class="mono" x="776" y="398" font-size="13" fill="#F5C453" text-anchor="middle">disagrees: catalyst.derivative_disagrees</text>
+  <text class="mono" x="776" y="416" font-size="13" fill="#F5C453" text-anchor="middle">both numbers shown, nothing written</text>
+
+  <!-- agree: three destinations -->
+  <path d="M838 230 C 880 230, 870 112, 916 112" fill="none" stroke="#D7F5C9" stroke-width="2.5" marker-end="url(#wf-arrow)"/>
+  <path d="M838 230 H 916" fill="none" stroke="#D7F5C9" stroke-width="2.5" marker-end="url(#wf-arrow)"/>
+  <path d="M838 230 C 880 230, 870 348, 916 348" fill="none" stroke="#D7F5C9" stroke-width="2.5" marker-end="url(#wf-arrow)"/>
+
+  <g>
+    <rect x="924" y="72" width="244" height="80" rx="12" fill="#0B4A04" stroke="#A8C6A0" stroke-width="1.5"/>
+    <text class="sans" x="942" y="100" font-size="15" font-weight="700" fill="#F2F7F0">value and gradient</text>
+    <text class="mono" x="942" y="122" font-size="12" fill="#D7F5C9">one JSON object, exit 0</text>
+    <text class="mono" x="942" y="140" font-size="12" fill="#A8C6A0">catalyst eval · the terminal flow</text>
+  </g>
+  <g>
+    <rect x="924" y="190" width="244" height="80" rx="12" fill="#0B4A04" stroke="#A8C6A0" stroke-width="1.5"/>
+    <text class="sans" x="942" y="218" font-size="15" font-weight="700" fill="#F2F7F0">Go module · base R</text>
+    <text class="mono" x="942" y="240" font-size="12" fill="#D7F5C9">fixtures, tolerance, report</text>
+    <text class="mono" x="942" y="258" font-size="12" fill="#A8C6A0">runs with no Catalyst present</text>
+  </g>
+  <g>
+    <rect x="924" y="308" width="244" height="80" rx="12" fill="#0B4A04" stroke="#A8C6A0" stroke-width="1.5"/>
+    <text class="sans" x="942" y="336" font-size="15" font-weight="700" fill="#F2F7F0">derivative artifact</text>
+    <text class="mono" x="942" y="358" font-size="12" fill="#D7F5C9">SHA-256 chain, provenance</text>
+    <text class="mono" x="942" y="376" font-size="12" fill="#A8C6A0">re-executable, tamper-evident</text>
+  </g>
+</svg>

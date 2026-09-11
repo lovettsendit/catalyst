@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 250" width="1200" height="250" role="img" aria-labelledby="pv-title pv-desc">
+  <title id="pv-title">The digest chain of a derivative artifact</title>
+  <desc id="pv-desc">Five linked cards: the source file, the LLVM module, the primal in Catalyst's IR, the derivative in Catalyst's IR, and the validation fixtures. Each carries the first characters of its SHA-256 digest as recorded in derivative.json. A note says that running the artifact again re-derives every digest first, and that one changed byte is refused as catalyst.artifact_tampered.</desc>
+  <defs>
+    <style>
+      .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+      .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+    </style>
+    <g id="pv-link">
+      <rect x="-14" y="-7" width="18" height="14" rx="7" fill="none" stroke="#D7F5C9" stroke-width="2"/>
+      <rect x="-4" y="-7" width="18" height="14" rx="7" fill="none" stroke="#D7F5C9" stroke-width="2"/>
+    </g>
+  </defs>
+  <rect width="1200" height="250" rx="18" fill="#136207"/>
+
+  <g>
+    <rect x="30" y="44" width="200" height="104" rx="12" fill="#0B4A04" stroke="#A8C6A0" stroke-width="1.5"/>
+    <text class="sans" x="46" y="72" font-size="15" font-weight="700" fill="#F2F7F0">heat.rs</text>
+    <text class="mono" x="46" y="94" font-size="11.5" fill="#A8C6A0">source_digest</text>
+    <text class="mono" x="46" y="114" font-size="13" fill="#D7F5C9">46bf908e3b31…</text>
+    <text class="mono" x="46" y="134" font-size="11" fill="#A8C6A0">read only to be digested</text>
+  </g>
+  <use href="#pv-link" x="256" y="96"/>
+  <g>
+    <rect x="266" y="44" width="200" height="104" rx="12" fill="#0B4A04" stroke="#A8C6A0" stroke-width="1.5"/>
+    <text class="sans" x="282" y="72" font-size="15" font-weight="700" fill="#F2F7F0">module.ll</text>
+    <text class="mono" x="282" y="94" font-size="11.5" fill="#A8C6A0">compiler_ir_digest</text>
+    <text class="mono" x="282" y="114" font-size="13" fill="#D7F5C9">2deb1a5f3d99…</text>
+    <text class="mono" x="282" y="134" font-size="11" fill="#A8C6A0">your compiler's IR, byte for byte</text>
+  </g>
+  <use href="#pv-link" x="492" y="96"/>
+  <g>
+    <rect x="502" y="44" width="200" height="104" rx="12" fill="#0B4A04" stroke="#A8C6A0" stroke-width="1.5"/>
+    <text class="sans" x="518" y="72" font-size="15" font-weight="700" fill="#F2F7F0">primal.cir</text>
+    <text class="mono" x="518" y="94" font-size="11.5" fill="#A8C6A0">primal_ir_digest</text>
+    <text class="mono" x="518" y="114" font-size="13" fill="#D7F5C9">d4e502de69d1…</text>
+    <text class="mono" x="518" y="134" font-size="11" fill="#A8C6A0">lowered and optimised</text>
+  </g>
+  <use href="#pv-link" x="728" y="96"/>
+  <g>
+    <rect x="738" y="44" width="200" height="104" rx="12" fill="#0B4A04" stroke="#A8C6A0" stroke-width="1.5"/>
+    <text class="sans" x="754" y="72" font-size="15" font-weight="700" fill="#F2F7F0">derivative.cir</text>
+    <text class="mono" x="754" y="94" font-size="11.5" fill="#A8C6A0">derivative_digest</text>
+    <text class="mono" x="754" y="114" font-size="13" fill="#D7F5C9">ca9297cfb5b3…</text>
+    <text class="mono" x="754" y="134" font-size="11" fill="#A8C6A0">mode and rules recorded</text>
+  </g>
+  <use href="#pv-link" x="964" y="96"/>
+  <g>
+    <rect x="974" y="44" width="200" height="104" rx="12" fill="#0B4A04" stroke="#A8C6A0" stroke-width="1.5"/>
+    <text class="sans" x="990" y="72" font-size="15" font-weight="700" fill="#F2F7F0">fixtures.json</text>
+    <text class="mono" x="990" y="94" font-size="11.5" fill="#A8C6A0">validation_digest</text>
+    <text class="mono" x="990" y="114" font-size="13" fill="#D7F5C9">be3acec24e97…</text>
+    <text class="mono" x="990" y="134" font-size="11" fill="#A8C6A0">both gradients, every point</text>
+  </g>
+
+  <text class="mono" x="30" y="190" font-size="14" fill="#F2F7F0">derivative.json records every digest, the compiler and target the module names, the crate version, the mode and the rules applied.</text>
+  <text class="mono" x="30" y="216" font-size="14" fill="#F5C453">differentiate run re-derives the chain before it evaluates; one changed byte is catalyst.artifact_tampered, naming which digest, and nothing runs.</text>
+</svg>

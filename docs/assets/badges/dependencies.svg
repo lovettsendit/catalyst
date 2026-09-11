@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="140" height="20" role="img" aria-label="dependencies: none">
+  <title>dependencies: none</title>
+  <rect width="140" height="20" rx="4" fill="#0B4A04"/>
+  <rect x="94" width="46" height="20" rx="4" fill="#136207"/>
+  <rect x="94" width="8" height="20" fill="#136207"/>
+  <g font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="11" fill="#F2F7F0">
+    <text x="47" y="14" text-anchor="middle">dependencies</text>
+    <text x="117" y="14" text-anchor="middle" font-weight="700">none</text>
+  </g>
+</svg>

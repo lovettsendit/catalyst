@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 210" width="1200" height="210" role="img" aria-labelledby="cap-title cap-desc">
+  <title id="cap-title">What ships in the crate</title>
+  <desc id="cap-desc">Six tiles: a Rust engine with no dependencies and no unsafe code; a Go export that is standard library only; an R export in base R; a terminal flow in four panes; an AI path that runs the CLI you already pay for and may propose but not decide; and offline operation with no network and no credential.</desc>
+  <defs>
+    <style>
+      .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; }
+      .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+    </style>
+  </defs>
+  <rect width="1200" height="210" rx="18" fill="#136207"/>
+
+  <!-- 1 Rust engine -->
+  <g transform="translate(24 24)">
+    <rect width="180" height="162" rx="12" fill="#0B4A04" stroke="#A8C6A0" stroke-width="1.5"/>
+    <path d="M28 36 l16 -9 l16 9 v18 l-16 9 l-16 -9z" fill="none" stroke="#D7F5C9" stroke-width="2.5" stroke-linejoin="round"/>
+    <circle cx="44" cy="45" r="4" fill="#D7F5C9"/>
+    <text class="sans" x="16" y="92" font-size="16" font-weight="700" fill="#F2F7F0">Rust engine</text>
+    <text class="mono" x="16" y="114" font-size="12" fill="#D7F5C9">[dependencies] empty</text>
+    <text class="mono" x="16" y="132" font-size="12" fill="#D7F5C9">forbid(unsafe_code)</text>
+    <text class="mono" x="16" y="150" font-size="12" fill="#A8C6A0">parser to SHA-256, here</text>
+  </g>
+
+  <!-- 2 Go export -->
+  <g transform="translate(220 24)">
+    <rect width="180" height="162" rx="12" fill="#0B4A04" stroke="#A8C6A0" stroke-width="1.5"/>
+    <rect x="22" y="24" width="44" height="40" rx="8" fill="none" stroke="#D7F5C9" stroke-width="2.5"/>
+    <text class="mono" x="44" y="52" font-size="19" font-weight="700" fill="#D7F5C9" text-anchor="middle">Go</text>
+    <text class="sans" x="16" y="92" font-size="16" font-weight="700" fill="#F2F7F0">Go export</text>
+    <text class="mono" x="16" y="114" font-size="12" fill="#D7F5C9">module, no require</text>
+    <text class="mono" x="16" y="132" font-size="12" fill="#D7F5C9">fixtures + tolerance</text>
+    <text class="mono" x="16" y="150" font-size="12" fill="#A8C6A0">checked, not trusted</text>
+  </g>
+
+  <!-- 3 R export -->
+  <g transform="translate(416 24)">
+    <rect width="180" height="162" rx="12" fill="#0B4A04" stroke="#A8C6A0" stroke-width="1.5"/>
+    <rect x="22" y="24" width="44" height="40" rx="8" fill="none" stroke="#D7F5C9" stroke-width="2.5"/>
+    <text class="mono" x="44" y="52" font-size="19" font-weight="700" fill="#D7F5C9" text-anchor="middle">R</text>
+    <text class="sans" x="16" y="92" font-size="16" font-weight="700" fill="#F2F7F0">R export</text>
+    <text class="mono" x="16" y="114" font-size="12" fill="#D7F5C9">base R, no package</text>
+    <text class="mono" x="16" y="132" font-size="12" fill="#D7F5C9">same fixtures as Go</text>
+    <text class="mono" x="16" y="150" font-size="12" fill="#A8C6A0">Rscript --vanilla</text>
+  </g>
+
+  <!-- 4 Terminal flow -->
+  <g transform="translate(612 24)">
+    <rect width="180" height="162" rx="12" fill="#0B4A04" stroke="#A8C6A0" stroke-width="1.5"/>
+    <rect x="22" y="24" width="44" height="40" rx="6" fill="none" stroke="#D7F5C9" stroke-width="2.5"/>
+    <path d="M30 36 l8 6 l-8 6" fill="none" stroke="#D7F5C9" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M42 50 h14" stroke="#D7F5C9" stroke-width="2.5" stroke-linecap="round"/>
+    <text class="sans" x="16" y="92" font-size="16" font-weight="700" fill="#F2F7F0">Terminal flow</text>
+    <text class="mono" x="16" y="114" font-size="12" fill="#D7F5C9">Goal to Export, 4 panes</text>
+    <text class="mono" x="16" y="132" font-size="12" fill="#D7F5C9">headless and scripted</text>
+    <text class="mono" x="16" y="150" font-size="12" fill="#A8C6A0">byte-identical exports</text>
+  </g>
+
+  <!-- 5 AI on your plan -->
+  <g transform="translate(808 24)">
+    <rect width="180" height="162" rx="12" fill="#0B4A04" stroke="#A8C6A0" stroke-width="1.5"/>
+    <path d="M22 26 h44 a6 6 0 0 1 6 6 v20 a6 6 0 0 1 -6 6 h-26 l-10 9 v-9 h-8 a6 6 0 0 1 -6 -6 v-20 a6 6 0 0 1 6 -6z" fill="none" stroke="#D7F5C9" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M30 42 h28" stroke="#D7F5C9" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M78 30 v30" stroke="#F5C453" stroke-width="3" stroke-linecap="round"/>
+    <text class="sans" x="16" y="92" font-size="16" font-weight="700" fill="#F2F7F0">AI on your plan</text>
+    <text class="mono" x="16" y="114" font-size="12" fill="#D7F5C9">runs the CLI you own</text>
+    <text class="mono" x="16" y="132" font-size="12" fill="#D7F5C9">may propose</text>
+    <text class="mono" x="16" y="150" font-size="12" fill="#F5C453">may not decide</text>
+  </g>
+
+  <!-- 6 Offline -->
+  <g transform="translate(1004 24)">
+    <rect width="180" height="162" rx="12" fill="#0B4A04" stroke="#A8C6A0" stroke-width="1.5"/>
+    <circle cx="44" cy="44" r="20" fill="none" stroke="#D7F5C9" stroke-width="2.5"/>
+    <path d="M24 44 h40 M44 24 c-9 10 -9 30 0 40 M44 24 c9 10 9 30 0 40" fill="none" stroke="#D7F5C9" stroke-width="2"/>
+    <path d="M28 60 L60 28" stroke="#F5C453" stroke-width="3" stroke-linecap="round"/>
+    <text class="sans" x="16" y="92" font-size="16" font-weight="700" fill="#F2F7F0">Offline</text>
+    <text class="mono" x="16" y="114" font-size="12" fill="#D7F5C9">no socket, no shell</text>
+    <text class="mono" x="16" y="132" font-size="12" fill="#D7F5C9">no credential to hold</text>
+    <text class="mono" x="16" y="150" font-size="12" fill="#A8C6A0">builds with --offline</text>
+  </g>
+</svg>

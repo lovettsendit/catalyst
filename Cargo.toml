@@ -1,0 +1,24 @@
+[package]
+name = "catalyst"
+version = "0.1.0"
+edition = "2021"
+description = "A verification system for engineering computations: measures and differentiates a mathematical specification or a compiled program, checks every derivative independently, records where it came from, and exports what it can prove."
+license = "SSPL-1.0"
+repository = "https://github.com/lovettsendit/catalyst"
+
+# There are no dependencies, and that is a design constraint rather than an
+# accident. Everything is written here: the expression parser, the IR, the
+# optimiser, the analyses, both differentiation transforms, the interpreter,
+# the LLVM IR reader of the Catalyst Gradient Compiler, the finite-difference
+# verifier, the SHA-256, the JSON, the Go and R emitters and the front end.
+[dependencies]
+
+[lib]
+name = "catalyst"
+crate-type = ["rlib", "cdylib"]
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"
