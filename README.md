@@ -263,6 +263,8 @@ The verifier is **not** a backend. It never produces a derivative, only a verdic
 
 ## The guided terminal
 
+The TUI was tested in WezTerm, which is a recommended terminal for the full pane-based experience. WezTerm is optional and is not a Catalyst dependency.
+
 ```sh
 catalyst tui
 ```
