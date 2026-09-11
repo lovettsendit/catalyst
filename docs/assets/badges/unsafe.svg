@@ -1,10 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="156" height="26" role="img" aria-label="unsafe: forbidden">
+<svg xmlns="http://www.w3.org/2000/svg" width="114" height="20" viewBox="0 0 114 20" role="img" aria-label="unsafe: forbidden">
   <title>unsafe: forbidden</title>
-  <rect width="156" height="26" rx="4" fill="#0B4A04"/>
-  <rect x="68" width="88" height="26" rx="4" fill="#136207"/>
-  <rect x="68" width="8" height="26" fill="#136207"/>
-  <g font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif" font-size="13" fill="#F2F7F0">
-    <text x="34" y="18" text-anchor="middle">unsafe</text>
-    <text x="112" y="18" text-anchor="middle" font-weight="700">forbidden</text>
+  <defs>
+    <linearGradient id="unsafe-shade" x2="0" y2="100%">
+      <stop offset="0" stop-color="#fff" stop-opacity=".1"/>
+      <stop offset="1" stop-opacity=".1"/>
+    </linearGradient>
+    <clipPath id="unsafe-clip"><rect width="114" height="20" rx="3"/></clipPath>
+  </defs>
+  <g clip-path="url(#unsafe-clip)">
+    <rect width="49" height="20" fill="#0B4A04"/>
+    <rect x="49" width="65" height="20" fill="#136207"/>
+    <rect width="114" height="20" fill="url(#unsafe-shade)"/>
+  </g>
+  <g font-family="Verdana,Geneva,'DejaVu Sans',sans-serif" font-size="11" text-anchor="middle" fill="#fff">
+    <text x="24.5" y="14">unsafe</text>
+    <text x="81.5" y="14">forbidden</text>
   </g>
 </svg>
